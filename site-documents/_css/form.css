@@ -1,0 +1,25 @@
+@charset "UTF-8";
+fieldset#user{
+    background: url("../_imagens/icone-contato.png") no-repeat 95% 95%;
+    width: 500px;
+    margin: auto;
+}
+fieldset#address{
+    background: url("../_imagens/icone-endereco.png") no-repeat 95% 95%;
+    width: 500px;
+    margin: auto;
+    height: 200px;
+}
+fieldset#mensage{
+    background: url("../_imagens/icone-mensagem.png") no-repeat 95% 95%;
+    width: 500px;
+    margin: auto;
+}
+fieldset#request{
+    background: url("../_imagens/icone-pagamento.png") no-repeat 95% 95%;
+    width: 500px;
+    margin: auto;
+}
+textarea{
+    opacity: 0.4;
+}
