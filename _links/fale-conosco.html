@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet">
+    <title>Google Glass</title>
+    <link rel="stylesheet" href="../_css/estilo.css">
+    <link rel="stylesheet" href="../_css/form.css">
+    <script>
+        function calc_total(){
+            let quantity = document.getElementById("quantity").value
+            let total = quantity*1500
+            let price = document.getElementById("price").value= total
+        }
+    </script>
+</head>
+
+<body>
+<div id="interface">
+
+<header id="cabecalho">
+    <h1>Google Glass</h1>
+    <h2>A revolução do Google está chegando</h2>
+
+    <img id="foto" src="../_imagens/contato.png">
+    <nav id="menu">
+        <h1>Menu Principal</h1>
+        <ul>
+            <li><a href = "../index.html" onmouseover = "mudarimg('../_imagens/home.png')"
+                onmouseout = "mudarimg('../_imagens/contato.png')">Home</a></li>
+            <li><a href = "../_links\specs.html" onmouseover = "mudarimg('../_imagens/especificacoes.png')"
+                onmouseout = "mudarimg('../_imagens/contato.png')">Especificações</a></li>
+            <li><a href = "../_links\fotos.html" onmouseover = "mudarimg('../_imagens/fotos.png')" 
+                onmouseout = "mudarimg('../_imagens/contato.png')">Fotos</a></li>
+            <li><a href = "../_links\multimidia.html" onmouseover = "mudarimg('../_imagens/multimidia.png')" 
+                onmouseout = "mudarimg('../_imagens/contato.png')">Multimídia</a></li>
+            <li><a href = "../_links\fale-conosco.html" onmouseover = "mudarimg('../_imagens/contato.png')" 
+                onmouseout = "mudarimg('../_imagens/contato.png')">Fale conosco</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="corpo-full">
+    <hgroup id="header-corpo">
+        <h2>Fale Conosco > Contato</h2>
+        <h1>Formulário de Contato</h1>
+        <h2>por Carlos Alencar</h2>
+        <h3>Atualizado em 20/Julho/2019</h3>
+    </hgroup>
+
+<form method="POST" action="mailto:carlos.alencar.99@gmail.com" id="contact" oninput="calc_total()">
+    <fieldset id="user">
+        <legend>Identificação do Usuário</legend>
+            <p><label for="name">Nome:</label><input type="text" id="name" name="name" size="30" maxlength="30" placeholder="Nome Completo"></p>
+            <p><label for="pw">Senha:</label><input type="password" id="pw" name="pw" maxlength="8" placeholder="8 digitos"></p>
+            <p><label for="email">E-mail:</label><input type="email" id="email" name="email" placeholder="Digite seu email aqui"></p>
+
+            <fieldset id="sex">
+            <legend>Sexo</legend>
+                <p><input type="radio" id="mas" name="sex" checked><label for="mas">Masculino</label></p>
+                <p><input type="radio" id="fem" name="sex"><label for="fem">Feminino</label></p>
+                <p><input type="radio" id="others" name="sex"><label for="others">Outros</label></p>
+            </fieldset>
+
+            <p><label for="date">Data de Nascimento:</label><input type="date" id="date" name="date"></p>
+    </fieldset>
+
+    <fieldset id="address">
+        <legend>Endereço do Usuário</legend>
+        <p><label for="logra">Logradouro:</label><input type="text" id="logra" name="logra" placeholder="AV, Trav, Rua,..."></p>
+        <p><label for="number">Número:</label><input type="number" id="number" name="number" placeholder="Número da residência"></p>
+        <p><label for="state">Estado:</label><select id="state" name="state">
+            <option>Acre</option>
+            <option>Alagoas</option>
+            <option>Amapá</option> 
+            <option>Amazonas</option> 
+            <option>Bahia</option>
+            <option>Ceará</option> 
+            <option>Distrito Federal</option> 
+            <option>Espírito Santo</option> 
+            <option>Goiás</option> 
+            <option>Maranhão</option> 
+            <option>Mato Grosso</option> 
+            <option>Mato Grosso do Sul</option> 
+            <option>Minas Gerais</option> 
+            <option>Pará</option> 
+            <option>Paraíba</option> 
+            <option>Paraná</option> 
+            <option>Pernambuco</option> 
+            <option>Piauí</option> 
+            <option>Rio de Janeiro</option>
+            <option>Rio Grande do Norte</option>
+            <option>Rio Grande do Sul</option> 
+            <option>Rondônia</option> 
+            <option>Roraima</option>
+            <option>Santa Catarina</option>
+            <option>São Paulo</option>
+            <option>Sergipe</option>
+            <option>Tocantins</option>
+        </select></p>
+        <p><label for="city">Cidade:</label><input type="text" id="city" name="city" placeholder="Nome da Cidade"></p>
+    </fieldset>
+
+    <fieldset id="mensage">
+        <legend>Mensagem do Usuário</legend>
+        <p><label for="urgency">Grau de Urgência:</label>Mín<input type="range" step="2" min="0" max="10">Máx</p>
+        <p><label for="mensage">Mensagem:</label><br>
+            <textarea cols="45" rows="5"></textarea></p>
+    </fieldset>
+
+    <fieldset id="request">
+    <legend>Quero um Google Glass</legend>
+    <p><input type="checkbox" id="check" name="check" checked><label for="check">Gostaria de adquirir um Google Glass quando disponível</label></p>
+    <p><label for="color">Cor:</label><input type="color" id="color" name="color"></p>
+    <p><label for="quantity">Quantidade:</label><input type="number" id="quantity" name="quantity" min="0" max="5"></p>
+    <p><label for="price">Preço Total: R$</label><input type="text" id="price" name="price" readonly></p>
+    </fieldset>
+
+    <input type="image" src="../_imagens/botao-enviar.png">
+</form>
+</section>
+<footer id="rodape">
+    &copy;Copyright 2016 - by Carlos Alencar<br>
+    <a href="https://www.facebook.com/GoogIeGlass" target="_blanck"> Facebook </a>|<a href="https://twitter.com/Google" target="_blanck"> Twitter</a>
+</footer>
+<script src="../_javascript\script.js"></script>
+</div>
+</body>
+</html>
+
