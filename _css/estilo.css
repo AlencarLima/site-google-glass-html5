@@ -52,6 +52,7 @@ nav#menu h1{
     display: none;
 }
 header#cabecalho{
+    position: relative;
     border-bottom: 1px solid;
     height: 150px;
     background: url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 100px;
@@ -70,10 +71,10 @@ header#cabecalho h2{
     margin-top: 0px;
     margin-left: 10px;
 }
-img#foto{
+img#foto {
     position: absolute;
     top: 50px;
-    left: 1050px;
+    left: 80%;
 }
 section#corpo{
     display: block;
